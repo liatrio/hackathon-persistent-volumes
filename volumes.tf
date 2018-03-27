@@ -13,17 +13,6 @@ resource "aws_ebs_volume" "jenkins_master_data" {
   }
 }
 
-resource "aws_ebs_volume" "jenkins_node_data" {
-  availability_zone = "us-east-1a"
-  size              = 200
-  type              = "gp2"
-
-  tags {
-    Name    = "jenkins_node_data"
-    Project = "hackathon_pipeline"
-  }
-}
-
 resource "aws_ebs_volume" "bitbucket_data" {
   availability_zone = "us-east-1a"
   size              = 500
