@@ -67,3 +67,14 @@ resource "aws_ebs_volume" "artifactory_data" {
     Project = "hackathon_pipeline"
   }
 }
+
+resource "aws_ebs_volume" "crowd_data" {
+  availability_zone = "us-east-1a"
+  size              = 200
+  type              = "gp2"
+
+  tags {
+    Name    = "crowd_data"
+    Project = "hackathon_pipeline"
+  }
+}
